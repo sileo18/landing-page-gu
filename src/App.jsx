@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Instagram, Camera, Youtube } from 'lucide-react'
+import { Instagram, Camera, Youtube, ExternalLink } from 'lucide-react'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -40,8 +40,7 @@ function App() {
       <section id="inicio" className="min-h-screen flex items-center justify-center pt-20 px-6">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
-            <div className="flex items-center gap-3">
-              <Camera size={32} className="text-primary-mid flex-shrink-0" />
+            <div className="flex items-center gap-3">              
               <h1 className="text-3xl md:text-5xl font-bold break-words">Capturando a Essência</h1>
             </div>
             
@@ -86,14 +85,14 @@ function App() {
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Trabalhos</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {[
-              { img: 'FOTO1', title: 'Show Underground', desc: 'Cobertura fotográfica de evento trap na zona sul' },
-              { img: 'FOTO2', title: 'Sessão de Estúdio', desc: 'Registro de gravação de EP com artista local' },
-              { img: 'FOTO3', title: 'Street Session', desc: 'Ensaio urbano com rapper emergente' },
-              { img: 'FOTO4', title: 'Festival de Rap', desc: 'Documentação de festival com 5 artistas' },
-              { img: 'FOTO5', title: 'Backstage', desc: 'Bastidores de show com 2000+ pessoas' },
-              { img: 'FOTO6', title: 'Cypher Noturno', desc: 'Registro de batalha de rimas na madrugada' },
+              { img: 'FOTO1', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona leste' },
+              { img: 'FOTO2', title: 'Still Cam', desc: 'Registro de gravação de EP com artista local' },
+              { img: 'FOTO3', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona leste' },
+              { img: 'FOTO4', title: 'Ensaio Fotográfico', desc: 'Sessão fotográfica em estúdio' },
+              { img: 'FOTO5', title: 'Still Cam', desc: 'Registro de gravação de EP com artista local'},
+              { img: 'FOTO6', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul' },
             ].map((work, index) => (
               <div 
                 key={index} 
@@ -111,6 +110,18 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="flex justify-center mb-20">
+            <a 
+              href="https://www.behance.net/guqroz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-mid hover:bg-alternative transition-colors rounded-sm text-sm font-medium"
+            >
+              <ExternalLink size={18} />
+              Ver Mais
+            </a>
           </div>
 
           <div className="max-w-6xl mx-auto">
@@ -168,7 +179,7 @@ function App() {
         <img 
           src="/assets/CTA1.jpg" 
           alt="Contato"
-          className="w-full h-[500px] object-cover object-center rounded-sm shadow-2xl"
+          className="w-full h-[500px] object-cover object-[center_0%] rounded-sm shadow-2xl"
         />
       </div>
 

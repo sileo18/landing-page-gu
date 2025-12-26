@@ -61,12 +61,12 @@ function App() {
                 Instagram
               </a>
               <a 
-                href="https://www.youtube.com/@guqroz" 
+                href="https://wa.me/5511914958005?text=Ol%C3%A1%21%20Vi%20seu%20trabalho%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Voc%C3%AA%20tem%20disponibilidade%3F" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-white/20 hover:border-primary-mid transition-colors rounded-sm text-sm font-medium"
               >
-                YouTube
+                Whatsapp
               </a>
             </div>
           </div>

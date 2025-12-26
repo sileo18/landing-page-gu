@@ -37,6 +37,14 @@ function App() {
         </nav>
       </header>
 
+      <section className="hidden md:block w-full pt-20">
+        <img 
+          src="/assets/BANNER.webp" 
+          alt="Banner" 
+          className="w-full h-auto object-contain"
+        />
+      </section>
+
       <section id="inicio" className="min-h-screen flex items-center justify-center pt-20 px-6">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
@@ -61,12 +69,12 @@ function App() {
                 Instagram
               </a>
               <a 
-                href="https://wa.me/5511914958005?text=Ol%C3%A1%21%20Vi%20seu%20trabalho%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Voc%C3%AA%20tem%20disponibilidade%3F" 
+                href="https://www.youtube.com/@guqroz" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-white/20 hover:border-primary-mid transition-colors rounded-sm text-sm font-medium"
               >
-                Whatsapp
+                YouTube
               </a>
             </div>
           </div>
@@ -124,7 +132,7 @@ function App() {
             </a>
           </div>
 
-          <div className="max-w-6xl mx-auto py-10">
+          <div className="max-w-6xl mx-auto">
             <h3 className="text-2xl font-bold mb-8 text-center">Videoclipe em Destaque</h3>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <a

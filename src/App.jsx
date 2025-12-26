@@ -76,7 +76,7 @@ function App() {
             <img 
               src="/assets/HERO.jpg"
               alt="Fotografia Principal" 
-              className="w-full h-[500px] object-cover object-center rounded-sm shadow-2xl"
+              className="w-full h-[500px] object-cover object-[center_0%] rounded-sm shadow-2xl"
             />
           </div>
         </div>

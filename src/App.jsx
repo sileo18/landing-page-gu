@@ -193,7 +193,7 @@ function App() {
           </a>
 
           <a 
-            href="https://wa.me/5511999999999" 
+            href="https://wa.me/5511914958005?text=Ol%C3%A1%21%20Vi%20seu%20trabalho%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Voc%C3%AA%20tem%20disponibilidade%3F"
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-4 bg-primary/50 border border-white/10 rounded-sm hover:border-primary-mid transition-colors group"
@@ -208,7 +208,7 @@ function App() {
           </a>
 
           <a 
-            href="mailto:contato@exemplo.com" 
+            href="mailto:guqroz@gmail.com" 
             className="flex items-center gap-4 p-4 bg-primary/50 border border-white/10 rounded-sm hover:border-primary-mid transition-colors group"
           >
             <svg className="w-6 h-6 text-primary-mid flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

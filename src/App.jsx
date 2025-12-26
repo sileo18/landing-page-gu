@@ -203,7 +203,7 @@ function App() {
             </svg>
             <div>
               <p className="text-sm text-white/60">WhatsApp</p>
-              <p className="font-medium group-hover:text-primary-mid transition-colors">+55 (11) 99999-9999</p>
+              <p className="font-medium group-hover:text-primary-mid transition-colors">+55 (11) 91495-8005</p>
             </div>
           </a>
 
@@ -216,7 +216,7 @@ function App() {
             </svg>
             <div>
               <p className="text-sm text-white/60">Email</p>
-              <p className="font-medium group-hover:text-primary-mid transition-colors">contato@exemplo.com</p>
+              <p className="font-medium group-hover:text-primary-mid transition-colors">guqroz@gmail.com</p>
             </div>
           </a>
         </div>

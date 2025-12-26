@@ -15,9 +15,9 @@ function App() {
   return (
     <div className="min-h-screen bg-primary overflow-x-hidden">
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-primary/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
-        <nav className="container mx-auto px-6 py-6 flex items-center justify-between">
-          <div className="flex items-center flex-shrink-0">
-            <img src="/assets/LOGO.png" alt="Logo" className="h-12 w-auto object-contain" />
+        <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center flex-shrink-0" style={{ marginTop: '4px' }}>
+            <img src="/assets/LOGO.png" alt="Logo" className="h-10 w-auto object-contain" />
           </div>
           
           <ul className="hidden md:flex items-center gap-8 text-sm font-light absolute left-1/2 transform -translate-x-1/2">
@@ -76,7 +76,7 @@ function App() {
             <img 
               src="/assets/HERO.jpg"
               alt="Fotografia Principal" 
-              className="w-full h-[600px] object-cover rounded-sm shadow-2xl"
+              className="w-full max-h-[600px] object-contain rounded-sm"
             />
           </div>
         </div>

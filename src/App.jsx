@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Instagram, Camera, Youtube, ExternalLink } from 'lucide-react'
+import { Instagram, Camera, Youtube, ExternalLink, Clapperboard } from 'lucide-react'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -45,7 +45,7 @@ function App() {
         />
       </section>      
 
-      <section id="inicio" className="min-h-96 flex items-center justify-center py-36 px-6">
+      <section id="inicio" className="max-h-[600px] flex items-center justify-center py-36 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-6 animate-fade-in text-center">
             <div className="flex items-center justify-center gap-3">
@@ -82,11 +82,14 @@ function App() {
         </div>
       </section>
 
-      <section id="trabalho" className="py-20 px-6">
+      <section id="trabalho" className="pt-8 pb-16 px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Trabalhos</h2>
+          <div className='flex items-center justify-center gap-2 mb-12'>
+            <Clapperboard size={32}/>
+            <h2 className="text-3xl md:text-4xl font-bold">Trabalhos</h2>
+          </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
             {[
               { img: 'FOTO1', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona leste' },
               { img: 'FOTO2', title: 'Still Cam', desc: 'Registro de gravação de EP com artista local' },
@@ -94,6 +97,8 @@ function App() {
               { img: 'FOTO4', title: 'Ensaio Fotográfico', desc: 'Sessão fotográfica em estúdio' },
               { img: 'FOTO5', title: 'Still Cam', desc: 'Registro de gravação de EP com artista local'},
               { img: 'FOTO6', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul' },
+              { img: 'FOTO7', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul' },
+              { img: 'FOTO8', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul' },
             ].map((work, index) => (
               <div 
                 key={index} 
@@ -103,7 +108,7 @@ function App() {
                 <img 
                   src={`/assets/${work.img}.jpg`} 
                   alt={work.title}
-                  className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <h3 className="text-xl font-semibold mb-2">{work.title}</h3>
@@ -118,14 +123,14 @@ function App() {
               href="https://www.behance.net/guqroz" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-mid hover:bg-alternative transition-colors rounded-sm text-sm font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 mt-4 bg-primary-mid hover:bg-alternative transition-colors rounded-sm text-sm font-medium"
             >
               <ExternalLink size={18} />
               Ver Mais
             </a>
           </div>
 
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto py-16">
             <h3 className="text-2xl font-bold mb-8 text-center">Videoclipe em Destaque</h3>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <a
@@ -137,7 +142,7 @@ function App() {
                 <img 
                   src="/assets/CLIPE1.jpg" 
                   alt="Videoclipe"
-                  className="w-full h-[500px] object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-auto object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="w-20 h-20 rounded-full border-2 border-white flex items-center justify-center">
@@ -173,7 +178,7 @@ function App() {
         </div>
       </section>
 
-      <section id="contato" className="py-20 px-6 bg-primary-dark/30">
+      <section id="contato" className="py-36 px-6 bg-primary-dark/30">
   <div className="container mx-auto max-w-5xl">
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div>
@@ -243,7 +248,7 @@ function App() {
   </div>
 </section>
 
-      <section className="py-20 px-6">
+      <section className="py-36 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>

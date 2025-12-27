@@ -133,7 +133,7 @@ function App() {
             </a>
           </div>
 
-          <div className="max-w-6xl mx-auto py-16 sm:py-4">
+          <div className="max-w-6xl mx-auto py-8 md:py-16">
             <h3 className="text-2xl font-bold mb-8 text-center">Videoclipes</h3>
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               {[
@@ -166,7 +166,7 @@ function App() {
         </div>
       </section>
 
-      <section id="contato" className="py-36 px-6 bg-primary-dark/30">
+      <section id="contato" className="py-16 md:py-36 px-6 bg-primary-dark/30">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -236,7 +236,7 @@ function App() {
         </div>
       </section>
 
-      <section className="py-36 px-6">
+      <section className="py-16 md:py-36 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>

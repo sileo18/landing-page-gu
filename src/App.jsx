@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Instagram, Camera, Youtube, ExternalLink, Clapperboard } from 'lucide-react'
+import { Instagram, Camera, Youtube, ExternalLink, Clapperboard, Play } from 'lucide-react'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -85,38 +85,41 @@ function App() {
       <section id="trabalho" className="pt-8 pb-16 px-6">
         <div className="container mx-auto">
           <div className='flex items-center justify-center gap-2 mb-12'>
-            <Clapperboard size={32}/>
+            <Clapperboard size={32} className="text-primary-mid"/>
             <h2 className="text-3xl md:text-4xl font-bold">Trabalhos</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            {[
-              { img: 'FOTO1', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona leste' },
-              { img: 'FOTO2', title: 'Still Cam', desc: 'Registro de gravação de EP com artista local' },
-              { img: 'FOTO3', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona leste' },
-              { img: 'FOTO4', title: 'Ensaio Fotográfico', desc: 'Sessão fotográfica em estúdio' },
-              { img: 'FOTO5', title: 'Still Cam', desc: 'Registro de gravação de EP com artista local'},
-              { img: 'FOTO6', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul' },
-              { img: 'FOTO7', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul' },
-              { img: 'FOTO8', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul' },
-            ].map((work, index) => (
-              <div 
-                key={index} 
-                className="group relative overflow-hidden rounded-sm cursor-pointer"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <img 
-                  src={`/assets/${work.img}.jpg`} 
-                  alt={work.title}
-                  className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <h3 className="text-xl font-semibold mb-2">{work.title}</h3>
-                  <p className="text-sm text-white/80">{work.desc}</p>
-                </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
+        {[
+            { img: 'FOTO1', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona leste', link: 'https://www.behance.net/gallery/235319315/Jovem-Flip-Fotografia-Still' },
+            { img: 'FOTO2', title: 'Still Cam', desc: 'Registro de gravação de EP com artista local', link: 'https://www.behance.net/gallery/233107649/Lissa-MC-Ensaio-Fotografico' },
+            { img: 'FOTO3', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona leste', link: 'https://www.behance.net/gallery/241130641/For-My-Suzy-Fotografia-Still' },
+            { img: 'FOTO4', title: 'Ensaio Fotográfico', desc: 'Sessão fotográfica em estúdio', link: 'https://www.behance.net/gallery/235319769/Jhulius-Fotografia-Still' },
+            { img: 'FOTO5', title: 'Still Cam', desc: 'Registro de gravação de EP com artista local', link: 'https://www.behance.net/gallery/241130379/KAKAU-Fotografia-Still' },
+            { img: 'FOTO6', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul', link: 'https://www.behance.net/gallery/235319421/Esdras-Lira-Fotografia-Still' },
+            { img: 'FOTO7', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul', link: 'https://www.behance.net/gallery/218891577/Te-Fazer-Dancar-Making-Of' },
+            { img: 'FOTO8', title: 'Still Cam', desc: 'Cobertura fotográfica de videoclipe de trap na zona sul', link: 'https://www.behance.net/gallery/232341149/No-Quase-Photoshoot' },
+          ].map((work, index) => (
+            <a 
+              key={index}
+              href={work.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden rounded-sm cursor-pointer block"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <img 
+                src={`/assets/${work.img}.jpg`} 
+                alt={work.title}
+                className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <h3 className="text-xl font-semibold mb-2">{work.title}</h3>
+                <p className="text-sm text-white/80">{work.desc}</p>
               </div>
-            ))}
-          </div>
+            </a>
+          ))}
+        </div>
 
           <div className="flex justify-center mb-20">
             <a 
@@ -130,123 +133,108 @@ function App() {
             </a>
           </div>
 
-          <div className="max-w-6xl mx-auto py-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Videoclipe em Destaque</h3>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <a
-                href="https://www.youtube.com/watch?v=NWwe_jbohLY&list=PLde8dnBAaMVG38H-uI92esOI1dGycCOoR&pp=gAQB"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block overflow-hidden rounded-sm"
-              >
-                <img 
-                  src="/assets/CLIPE1.jpg" 
-                  alt="Videoclipe"
-                  className="w-full h-auto object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full border-2 border-white flex items-center justify-center">
-                    <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1"></div>
-                  </div>
-                </div>
-              </a>
-
-              <div className="space-y-4">
-                <h4 className="text-2xl md:text-3xl font-bold">Direção e Fotografia</h4>
-                <p className="text-lg text-white/80 leading-relaxed">
-                  Videoclipe oficial onde assumi a direção completa e fotografia. Um trabalho que captura 
-                  a essência do artista, mesclando estética urbana com narrativa visual impactante. 
-                  Cada frame foi pensado para transmitir a energia e autenticidade do trap nacional.
-                </p>
-                <p className="text-white/60">
-                  Produção completa: conceito, direção, fotografia e edição de cor.
-                </p>
-                <a 
-                  href="https://www.youtube.com/watch?v=NWwe_jbohLY&list=PLde8dnBAaMVG38H-uI92esOI1dGycCOoR&pp=gAQB"
+          <div className="max-w-6xl mx-auto py-16 sm:py-4">
+            <h3 className="text-2xl font-bold mb-8 text-center">Videoclipes</h3>
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              {[
+                { img: 'CLIPE1', link: 'https://youtu.be/NWwe_jbohLY?si=TVI_jrdwko6sr1BD' },
+                { img: 'CLIPE2', link: 'https://www.youtube.com/watch?v=SKNco2gwOks&list=PLde8dnBAaMVG38H-uI92esOI1dGycCOoR&index=10&pp=gAQBiAQB8AUBsAgC' },
+                { img: 'CLIPE3', link: 'https://youtu.be/GovMGcebVP0?si=_NTnM7vHY_OUDqsQ' },
+                { img: 'CLIPE4', link: 'https://www.youtube.com/watch?v=zOXu-jPHq1U&list=PLde8dnBAaMVG38H-uI92esOI1dGycCOoR&index=2&pp=gAQBiAQB8AUBsAgC' },
+              ].map((clipe, index) => (
+                <a
+                  key={index}
+                  href={clipe.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-mid hover:bg-alternative transition-colors rounded-sm text-sm font-medium mt-4"
+                  className="group relative block overflow-hidden rounded-sm"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                  Assistir no YouTube
+                  <img 
+                    src={`/assets/${clipe.img}.webp`}
+                    alt={`Videoclipe ${index + 1}`}
+                    className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center">
+                      <Play size={28} className="text-white ml-1" fill="white" />
+                    </div>
+                  </div>
                 </a>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       <section id="contato" className="py-36 px-6 bg-primary-dark/30">
-  <div className="container mx-auto max-w-5xl">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <img 
-          src="/assets/CTA1.jpg" 
-          alt="Contato"
-          className="w-full h-[500px] object-cover object-[center_0%] rounded-sm shadow-2xl"
-        />
-      </div>
-
-      <div className="space-y-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Vamos Criar Juntos</h2>
-        <p className="text-white/80 mb-8">
-          Tem um projeto em mente? Entre em contato e vamos transformar sua visão em realidade.
-        </p>
-
-        <div className="space-y-6">
-          <a 
-            href="https://www.instagram.com/guqroz" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 bg-primary/50 border border-white/10 rounded-sm hover:border-primary-mid transition-colors group"
-          >
-            <Instagram size={24} className="text-primary-mid flex-shrink-0" />
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-sm text-white/60">Instagram</p>
-              <p className="font-medium group-hover:text-primary-mid transition-colors">@guqroz</p>
+              <img 
+                src="/assets/CTA1.jpg" 
+                alt="Contato"
+                className="w-full h-[500px] object-cover object-[center_0%] rounded-sm shadow-2xl"
+              />
             </div>
-          </a>
 
-          <a 
-            href="https://wa.me/5511914958005?text=Ol%C3%A1%21%20Vi%20seu%20trabalho%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Voc%C3%AA%20tem%20disponibilidade%3F"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-4 p-4 bg-primary/50 border border-white/10 rounded-sm hover:border-primary-mid transition-colors group"
-          >
-            <svg className="w-6 h-6 text-primary-mid flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-            <div>
-              <p className="text-sm text-white/60">WhatsApp</p>
-              <p className="font-medium group-hover:text-primary-mid transition-colors">+55 (11) 91495-8005</p>
-            </div>
-          </a>
+            <div className="space-y-6 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Vamos Criar Juntos</h2>
+              <p className="text-white/80 mb-8">
+                Tem um projeto em mente? Entre em contato e vamos transformar sua visão em realidade.
+              </p>
 
-          <a 
-            href="mailto:guqroz@gmail.com" 
-            className="flex items-center gap-4 p-4 bg-primary/50 border border-white/10 rounded-sm hover:border-primary-mid transition-colors group"
-          >
-            <svg className="w-6 h-6 text-primary-mid flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            <div>
-              <p className="text-sm text-white/60">Email</p>
-              <p className="font-medium group-hover:text-primary-mid transition-colors">guqroz@gmail.com</p>
+              <div className="space-y-6">
+                <a 
+                  href="https://www.instagram.com/guqroz" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 bg-primary/50 border border-white/10 rounded-sm hover:border-primary-mid transition-colors group"
+                >
+                  <Instagram size={24} className="text-primary-mid flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-white/60">Instagram</p>
+                    <p className="font-medium group-hover:text-primary-mid transition-colors">@guqroz</p>
+                  </div>
+                </a>
+
+                <a 
+                  href="https://wa.me/5511914958005?text=Ol%C3%A1%21%20Vi%20seu%20trabalho%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%20Voc%C3%AA%20tem%20disponibilidade%3F"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 bg-primary/50 border border-white/10 rounded-sm hover:border-primary-mid transition-colors group"
+                >
+                  <svg className="w-6 h-6 text-primary-mid flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                  </svg>
+                  <div>
+                    <p className="text-sm text-white/60">WhatsApp</p>
+                    <p className="font-medium group-hover:text-primary-mid transition-colors">+55 (11) 91495-8005</p>
+                  </div>
+                </a>
+
+                <a 
+                  href="mailto:guqroz@gmail.com" 
+                  className="flex items-center gap-4 p-4 bg-primary/50 border border-white/10 rounded-sm hover:border-primary-mid transition-colors group"
+                >
+                  <svg className="w-6 h-6 text-primary-mid flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <div>
+                    <p className="text-sm text-white/60">Email</p>
+                    <p className="font-medium group-hover:text-primary-mid transition-colors">guqroz@gmail.com</p>
+                  </div>
+                </a>
+              </div>
+
+              <div className="mt-8 p-4 bg-primary-mid/10 border border-primary-mid/20 rounded-sm">
+                <p className="text-sm text-white/70 italic">
+                  "Olá! Vi seu trabalho e gostaria de conversar sobre um projeto. Você tem disponibilidade?"
+                </p>
+              </div>
             </div>
-          </a>
+          </div>
         </div>
-
-        <div className="mt-8 p-4 bg-primary-mid/10 border border-primary-mid/20 rounded-sm">
-          <p className="text-sm text-white/70 italic">
-            "Olá! Vi seu trabalho e gostaria de conversar sobre um projeto. Você tem disponibilidade?"
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <section className="py-36 px-6">
         <div className="container mx-auto max-w-4xl">
@@ -259,8 +247,8 @@ function App() {
               />
             </div>
 
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Sobre Mim</h2>
+            <div className="space-y-6 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center md:text-left">Sobre Mim</h2>   
               <p className="text-white/80 leading-relaxed">
                 Comecei na fotografia por acaso, mas me encontrei de verdade quando mergulhei na cena do trap e do rap. 
                 Cada show, cada cypher, cada momento nos bastidores me mostrou que meu trabalho vai além de apertar um botão — 

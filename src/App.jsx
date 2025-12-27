@@ -49,15 +49,13 @@ function App() {
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-6 animate-fade-in text-center">
             <div className="flex items-center justify-center gap-3">
-              <Camera size={32} className="text-primary-mid flex-shrink-0" />
-              <h1 className="text-3xl md:text-5xl font-bold">Capturando a Essência</h1>
+             <h1 className="text-3xl md:text-5xl font-bold">Capturando a Essência</h1>
             </div>
             
             <p className="text-lg font-light leading-relaxed text-white/80">
-              A fotografia e o videoclipe são mais do que técnica — são a forma como eu vejo o mundo. 
-              Cada frame é uma história, cada beat é uma emoção capturada. No universo do trap e do rap, 
-              encontrei minha voz visual: crua, autêntica e sem filtros. É sobre imortalizar momentos que 
-              definem uma geração, uma cultura, um movimento.
+             Fotografia e audiovisual vão além da técnica — são a minha forma de contar histórias.
+             Transformo ideias em imagens que comunicam identidade, emoção e propósito.
+              Cada frame é cuidadosamente planejado para traduzir o ritmo, a estética e a essência de projetos musicais, criando narrativas visuais autênticas e impactantes. Meu trabalho é eternizar momentos únicos e dar forma visual a movimentos que emergem da música e da cultura.
             </p>
 
             <div className="flex gap-4 pt-4 justify-center">
@@ -85,8 +83,8 @@ function App() {
       <section id="trabalho" className="pt-8 pb-16 px-6">
         <div className="container mx-auto">
           <div className='flex items-center justify-center gap-2 mb-12'>
-            <Clapperboard size={32} className="text-primary-mid"/>
-            <h2 className="text-3xl md:text-4xl font-bold">Trabalhos</h2>
+            <Camera size={32} className="text-primary-mid"/>
+            <h2 className="text-3xl md:text-4xl font-bold">Fotografias</h2>
           </div>
           
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
@@ -134,7 +132,10 @@ function App() {
           </div>
 
           <div className="max-w-6xl mx-auto py-8 md:py-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Videoclipes</h3>
+            <div className='flex items-center justify-center gap-2 mb-12'>
+            <Camera size={32} className="text-primary-mid"/>
+            <h2 className="text-3xl md:text-4xl font-bold">Videoclipes</h2>
+          </div>
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               {[
                 { img: 'CLIPE1', link: 'https://youtu.be/NWwe_jbohLY?si=TVI_jrdwko6sr1BD' },
@@ -247,18 +248,20 @@ function App() {
               />
             </div>
 
-            <div className="space-y-6 text-center md:text-left">
+            <div className="space-y-6 text-center md:text-left max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center md:text-left">Sobre Mim</h2>   
-              <p className="text-white/80 leading-relaxed">
-                Comecei na fotografia por acaso, mas me encontrei de verdade quando mergulhei na cena do trap e do rap. 
-                Cada show, cada cypher, cada momento nos bastidores me mostrou que meu trabalho vai além de apertar um botão — 
-                é sobre contar histórias reais, sem romantização.
+              <p className="text-white/80 leading-relaxed text-sm">
+               Meu nome é Gustavo Queiroz, tenho 21 anos e atuo com fotografia e audiovisual, unindo técnica, sensibilidade e narrativa visual em cada projeto. Acredito no poder da imagem como forma de expressão, comunicação e construção de identidade.
               </p>
-              <p className="text-white/80 leading-relaxed">
-                Minha visão é simples: capturar a energia bruta, a autenticidade e a cultura que pulsa nas ruas. 
-                Trabalho com artistas que têm algo a dizer, que vivem o que cantam. Meu objetivo é eternizar esses momentos 
-                e mostrar ao mundo a força dessa geração.
+
+              <p className="text-white/80 leading-relaxed text-sm">
+              Minha trajetória começou no final de 2021, a partir de sessões fotográficas em estúdio com amigos, principalmente em ambientes musicais. Foi nesse processo que desenvolvi meu olhar criativo e passei a investir constantemente em aprendizado, equipamentos e experiências práticas, expandindo minha atuação para ensaios fotográficos, fotografia de shows ao vivo e produções visuais ligadas à música.
               </p>
+
+              <p className="text-white/80 leading-relaxed text-sm">
+              Com o tempo, esse caminho me levou naturalmente ao audiovisual, onde iniciei a produção de clipes musicais e aprofundei meus conhecimentos em captação, edição e direção. Hoje atuo de forma autônoma, aberto a diferentes tipos de projetos, sempre com o compromisso de entregar trabalhos autênticos, profissionais e alinhados à identidade de cada cliente.
+              </p>
+              
             </div>
           </div>
         </div>

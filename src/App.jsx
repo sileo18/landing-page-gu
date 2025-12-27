@@ -37,7 +37,7 @@ function App() {
         </nav>
       </header>
 
-      <section className="hidden md:block w-full pt-20">
+      <section className="hidden md:block w-full pt-16">
         <img 
           src="/assets/BANNER.webp" 
           alt="Banner" 

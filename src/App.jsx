@@ -268,9 +268,9 @@ function App() {
       </section>
 
       <footer className="py-8 px-6 border-t border-white/10">
-        <div className="container mx-auto flex items-center justify-center gap-2 text-sm text-white/40">
+        <div className="container mx-auto flex items-center justify-center gap-1 text-sm text-white/40">
           <span>Desenvolvido por</span>
-          <img src="/assets/SILEO.png" alt="SILEO" className="h-4 opacity-60" />
+          <img src="public/assets/LOGO_SILEO_ PNG_B.png" alt="SILEO" className="-translate-y-0.5 h-4 opacity-60" />
         </div>
       </footer>
 
